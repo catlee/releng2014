@@ -51,7 +51,7 @@
           <tr class="slide"><td># of checkins per month</td><td>~6,000 (apr)</td><td>~8,000 (mar) (+33%)</td></tr>
           <tr class="slide"><td>CPU hours per push (m-c)</td><td>295 (apr)</td><td>325 (apr) (+10%)</td></tr>
           <tr class="slide"><td>Jobs per month</td><td>1,219,428 (may)</td><td>1,578,356 (mar) (+29%)</td></tr>
-          <tr class="slide"><td>AWS spend</td><td>$78,156.42</td><td>$30,309.81 (so far!) (-50%)</td></tr>
+          <tr class="slide"><td>AWS spend</td><td>$78,156.42 (apr)</td><td>$31,219.94 (apr so far!) (- ~50%)</td></tr>
       </table>
       </p>
     </section>
@@ -90,8 +90,9 @@
             <li class="slide">S3 backed compiler cache for linux and windows</li>
             <li class="slide">Emulator B2G tests IN THE CLOUD</li>
             <li class="slide">Presented at <a href="http://relengofthenerds.blogspot.com/2014/03/eclipsecon-2014-trip-report.html">EclipseCon</a>  and <a href="http://armenzg.blogspot.ca/2014/02/mozillas-hybrid-continuous-integration.html">RELENG 2014</a></li>
+            <li class="slide">and many more</li>
         </ul>
-        <div class="slide"><a href="planet.mozilla.org/releng/">Planet RelEng</a> is a <strong>great</strong> resource for this! Keep the blog posts coming!</div>
+        <div class="slide"><small>(<a href="planet.mozilla.org/releng/">Planet RelEng</a> is a <strong>great</strong> resource for this! Keep the blog posts coming!)</small></div>
     </section>
 
     <section class="slide" id="branches">
@@ -123,15 +124,6 @@
     </section>
 
     <section class="slide">
-        <h2># Checkins</h2>
-        <p>Up from about <a href="http://oduinn.com/blog/2013/06/03/infrastructure-load-for-april-2013/">6,000</a> checkins per month to <a href="http://armenzg.blogspot.ca/2014/04/mozillas-pushes-march-2014.html">8,000</a> checkins per month
-        <a href="https://secure.pub.build.mozilla.org/buildapi/reports/pushes?starttime=1362114000&endtime=1401508800&int_size=2592000">
-            <img src="60a9df75.png">
-        </a>
-        </p>
-    </section>
-
-    <section class="slide">
         <h2>Themes for 2014</h2>
         <div class="slide">
             <h3>Scaling more (and smarter)</h3>
@@ -141,17 +133,27 @@
                 <li>Better tools for bisecting (buildapi!)</li>
             </ul>
         </div>
-        <div class="slide" id="developers">
+    </section>
+
+    <section class="slide" id="developers">
+        <div>
             <h3 id="embed">Focus on developers!</h3>
             <div class="slide">
-                Making great self-service tools:
+                Making great self-service tools, making our infrastructure more accessible:
                 <ul>
                     <li>Slave loan tool</li>
                     <li>Publishing AMIs, VM images, Docker containers, etc.</li>
                     <li>self-serve scheduling</li>
+                    <li>autoland (mark IV)</li>
+                    <li>Balrog</li>
                 </ul>
             </div>
         </div>
+        <h3 class="slide">What else can we do to be a <a href="http://oduinn.com/blog/2013/06/26/release-engineering-as-a-force-multiplier-at-google-techtalks/">force multiplier?</a></h3>
+    </section>
+
+    <section class="slide">
+        <h1>(Insightful closing thoughts)</h1>
     </section>
 
     <!-- End slides. -->
@@ -216,7 +218,7 @@
     $(document).bind("deck.change", function(event, from, to) {
         var $slide = $.deck('getSlide', to);
         if ($slide.attr('id') == 'developers') {
-            $("#embed").append("<iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/KMU0tzLwhbE?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
+            $("#embed").after("<iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/KMU0tzLwhbE?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
         }
 
         if ($slide.attr('id') == 'showbranchchanges') {
